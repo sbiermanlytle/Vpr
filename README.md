@@ -22,7 +22,7 @@ pod "Vipr"
 
 ## Author
 
-sbiermanlytle@gmail.com, sbiermanlytle@gmail.com
+Sebastian Bierman-Lytle
 
 ## License
 

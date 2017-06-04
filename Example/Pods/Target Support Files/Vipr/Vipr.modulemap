@@ -1,0 +1,6 @@
+framework module Vipr {
+  umbrella header "Vipr-umbrella.h"
+
+  export *
+  module * { export * }
+}
