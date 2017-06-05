@@ -14,16 +14,16 @@ Pod::Spec.new do |s|
 A lightweight lib with univeral utility.
                        DESC
 
-  s.homepage         = 'https://github.com/sbiermanlytle'
+  s.homepage         = 'https://github.com/sbiermanlytle/Vipr.git'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Sebastian Bierman-Lytle' => 'Sebastian Bierman-Lytle' }
-  s.source           = { :git => 'https://github.com/sbiermanlytle@gmail.com/Vipr.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/iioinc'
+  s.source           = { :git => 'https://github.com/sbiermanlytle/Vipr.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/iioinc'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'Vipr/Classes/**/*'
-  
+
   # s.resource_bundles = {
   #   'Vipr' => ['Vipr/Assets/*.png']
   # }
