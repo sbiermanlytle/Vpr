@@ -1,48 +1,51 @@
 //
-//  VPRLog.swift
+//  VprLog.swift
 //  Pods
 //
-//  Created by iljn on 6/4/17.
+//  Created by Sebastian Bierman-Lytle on 6/4/17.
 //
 //
 
 import Foundation
 
-struct VPRLog {
+public struct VprLog {
     
-    static let CN = "VPRLog"
+    static let CN = "VprLog"
     
-    enum Mode {
+    // MARK: Public Data
+    // --------------------------------------------------------------------------
+    
+    public enum Mode {
         case VERBOSE
         case DEBUG
         case MINIMAL
         case OFF
     }
-    static let mode:Mode = .VERBOSE
+    public static var mode:Mode = .VERBOSE
     
-    // MARK: Log Functions
+    // MARK: Public Log Functions
     // --------------------------------------------------------------------------
     
     // log an info message
-    static func log(_ className:String, _ msg:String, _ mode:Mode) {
-        _log("[\(className)] \(msg)", mode);
+    public static func log(_ sourceName:String, _ msg:String, _ mode:Mode) {
+        _log("[\(sourceName)] \(msg)", mode);
     }
     
     // log an error message
-    static func err(_ className:String, _ msg:String, _ mode:Mode) {
-        _log("!!!!!!!!!!!!!!!!!!!!! ERROR [\(className)] \(msg)", mode);
+    public static func err(_ sourceName:String, _ msg:String, _ mode:Mode) {
+        _log("!! ERROR [\(sourceName)] \(msg)", mode);
     }
     
     // log a warning message
-    static func warn(_ className:String, _ msg:String, _ mode:Mode) {
-        _log("????????????????????? WARNING [\(className)] \(msg)", mode);
+    public static func warn(_ sourceName:String, _ msg:String, _ mode:Mode) {
+        _log("?? WARNING [\(sourceName)] \(msg)", mode);
     }
     
-    // MARK: Log Util Functions
+    // MARK: Internal Log Functions
     // --------------------------------------------------------------------------
     
     // filter logs based on mode
-    static func _log(_ msg:String, _ mode:Mode) {
+    internal static func _log(_ msg:String, _ mode:Mode) {
         if _modeIsAllowed(mode) {
             print(msg);
         }

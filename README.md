@@ -1,6 +1,5 @@
 # Vipr
 
-[![CI Status](http://img.shields.io/travis/sbiermanlytle@gmail.com/Vipr.svg?style=flat)](https://travis-ci.org/sbiermanlytle@gmail.com/Vipr)
 [![Version](https://img.shields.io/cocoapods/v/Vipr.svg?style=flat)](http://cocoapods.org/pods/Vipr)
 [![License](https://img.shields.io/cocoapods/l/Vipr.svg?style=flat)](http://cocoapods.org/pods/Vipr)
 [![Platform](https://img.shields.io/cocoapods/p/Vipr.svg?style=flat)](http://cocoapods.org/pods/Vipr)

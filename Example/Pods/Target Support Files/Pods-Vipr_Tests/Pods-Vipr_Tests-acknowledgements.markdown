@@ -413,7 +413,7 @@ Apache License
 
 ## Vipr
 
-Copyright (c) 2017 sbiermanlytle@gmail.com <sbiermanlytle@gmail.com>
+Copyright (c) 2017 Sebastian Bierman-Lytle
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

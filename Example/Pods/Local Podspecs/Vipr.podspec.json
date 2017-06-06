@@ -1,20 +1,21 @@
 {
   "name": "Vipr",
   "version": "0.1.0",
-  "summary": "A short description of Vipr.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/sbiermanlytle@gmail.com/Vipr",
+  "summary": "A lightweight lib with univeral utility",
+  "description": "A lightweight lib with univeral utility.",
+  "homepage": "https://github.com/sbiermanlytle/Vipr.git",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "sbiermanlytle@gmail.com": "sbiermanlytle@gmail.com"
+    "Sebastian Bierman-Lytle": "Sebastian Bierman-Lytle"
   },
   "source": {
-    "git": "https://github.com/sbiermanlytle@gmail.com/Vipr.git",
+    "git": "https://github.com/sbiermanlytle/Vipr.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://twitter.com/iioinc",
   "platforms": {
     "ios": "8.0"
   },
