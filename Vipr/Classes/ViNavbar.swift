@@ -1,18 +1,22 @@
 //
-//  VprNavbar.swift
+//  ViNavbar.swift
 //  Pods
 //
 //  Created by Sebastian Bierman-Lytle on 6/4/17.
 //
 //
 
-import UIKit
+import Foundation
 
-public class VprNavbar: UIView {
+open class ViNavbar: UIView {
+    public static let CN = "VprNavbar"
     
     // MARK: Public Data
     // --------------------------------------------------------------------------
-    static var kStatusBarHeight:CGFloat = 20
+    public static var cStatusBarHeight:CGFloat = 20
+    public static var cNavbarHeight:CGFloat = 80
+    
+    public var title: UILabel = UILabel()
     
     // MARK: Initialization
     // --------------------------------------------------------------------------
@@ -29,16 +33,16 @@ public class VprNavbar: UIView {
         fatalError("This class does not support NSCoding")
     }
     
-    // MARK: Optional UI Components
+    // MARK: Optional Standard UI Components
     // --------------------------------------------------------------------------
-    
-    public func standardSetup(_ title: String = "Vipr") {
+    open func standardSetup(_ title: String = "Vipr") {
+        self.backgroundColor = UIColor(colorLiteralRed: 0.88, green: 0.88, blue: 0.88, alpha: 0.8)
         _ = setupBlur()
         _ = setupBorder()
         _ = setupTitle(title)
     }
     
-    public func setupBorder(_ width: CGFloat = 1.0) -> CALayer {
+    open func setupBorder(_ width: CGFloat = 1.0) -> CALayer {
         let border = CALayer()
         border.borderColor = UIColor(colorLiteralRed: 0.8, green: 0.8, blue: 0.8, alpha: 1).cgColor
         border.frame = CGRect(x: 0, y: self.frame.size.height - width, width:  self.frame.size.width, height: self.frame.size.height)
@@ -50,7 +54,7 @@ public class VprNavbar: UIView {
         return border
     }
     
-    public func setupBlur(_ style: UIBlurEffectStyle = UIBlurEffectStyle.light) -> UIVisualEffectView {
+    open func setupBlur(_ style: UIBlurEffectStyle = UIBlurEffectStyle.light) -> UIVisualEffectView {
         let blurEffect = UIBlurEffect(style: style)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = CGRect(x: 0, y: 0,
@@ -63,15 +67,14 @@ public class VprNavbar: UIView {
         return blurEffectView
     }
     
-    public func setupTitle (_ text: String = "Vipr") -> UILabel {
-        let title: UILabel = UILabel()
+    open func setupTitle (_ text: String, _ color: UIColor) -> UILabel {
         title.frame = CGRect(x: 0,
-                             y: VprNavbar.kStatusBarHeight + 6,
+                             y: ViNavbar.cStatusBarHeight + 6,
                              width: self.frame.width,
-                             height: self.frame.size.height - VprNavbar.kStatusBarHeight - 6)
+                             height: self.frame.size.height - ViNavbar.cStatusBarHeight - 6)
         title.text = text
         title.textAlignment = .center
-        title.textColor = UIColor(colorLiteralRed: 0.2, green: 0.2, blue: 0.2, alpha: 1)
+        title.textColor = color
         if #available(iOS 8.2, *) {
             title.font = UIFont.systemFont(ofSize: 26, weight: UIFontWeightBold)
         } else {
@@ -81,9 +84,36 @@ public class VprNavbar: UIView {
         return title
     }
     
+    open func setupTitle (_ text: String = "Vipr") -> UILabel {
+        return self.setupTitle(text, UIColor(colorLiteralRed: 0.2, green: 0.2, blue: 0.2, alpha: 1))
+    }
+    
+    // MARK: Optional Button UI Components
+    // --------------------------------------------------------------------------
+    
+    open func setupTextButton (_ text: String = "Button") -> UIButton {
+        let btn = UIButton()
+        btn.frame = CGRect(x: 0,
+                           y: ViNavbar.cStatusBarHeight + 6,
+                           width: self.frame.width / 3,
+                           height: self.frame.size.height - ViNavbar.cStatusBarHeight - 6)
+        btn.setTitle(text, for: UIControlState.normal)
+        btn.titleLabel?.textAlignment = .center
+        
+        if #available(iOS 8.2, *) {
+            btn.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: UIFontWeightMedium)
+        } else {
+            // Fallback on earlier versions
+        }
+        
+        self.addSubview(btn)
+        return btn
+    }
+    
+    
     // MARK: Internal Functions
     // --------------------------------------------------------------------------
     
-    func _setupView () {
+    private func _setupView () {
     }
 }

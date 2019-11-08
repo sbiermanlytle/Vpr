@@ -19,5 +19,16 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "Vipr/Classes/**/*"
+  "source_files": "Vipr/Classes/**/*",
+  "dependencies": {
+    "Alamofire": [
+      "~> 4.3"
+    ],
+    "SwiftyJSON": [
+      "~> 3.1.4"
+    ],
+    "Mixpanel-swift": [
+
+    ]
+  }
 }

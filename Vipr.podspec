@@ -29,5 +29,7 @@ A lightweight lib with univeral utility.
   # }
 
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'Alamofire', '~> 4.3'
+  s.dependency 'Alamofire', '~> 4.6'
+  s.dependency 'SwiftyJSON', '~> 4.0.0'
+  # s.dependency 'Mixpanel-swift'
 end

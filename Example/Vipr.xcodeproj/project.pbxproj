@@ -13,14 +13,14 @@
 
 /* Begin PBXFileReference section */
 		29AE88234AD5CC2C046140B3 /* Pods-Vipr_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vipr_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vipr_Tests/Pods-Vipr_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		2ADA745DB1D7757C6522F388 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		2ADA745DB1D7757C6522F388 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		31D0E050BD813C35A100E8C3 /* Pods_Vipr_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vipr_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		47865EBC4A27D1A8A69B215E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		47865EBC4A27D1A8A69B215E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Vipr_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Vipr_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		BFE5002A34BA988AD2DDA1CA /* Pods-Vipr_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vipr_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vipr_Tests/Pods-Vipr_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		E41C1F94A22D1B721F497FAB /* Vipr.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Vipr.podspec; path = ../Vipr.podspec; sourceTree = "<group>"; };
+		E41C1F94A22D1B721F497FAB /* Vipr.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Vipr.podspec; path = ../Vipr.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,12 +131,9 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0820;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = C8WFTYZE5U;
 						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -254,6 +251,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -301,6 +299,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -321,6 +320,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 29AE88234AD5CC2C046140B3 /* Pods-Vipr_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = C8WFTYZE5U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -341,6 +341,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BFE5002A34BA988AD2DDA1CA /* Pods-Vipr_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = C8WFTYZE5U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

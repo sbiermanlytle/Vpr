@@ -1,5 +1,5 @@
 //
-//  VprLog.swift
+//  ViLog.swift
 //  Pods
 //
 //  Created by Sebastian Bierman-Lytle on 6/4/17.
@@ -8,13 +8,10 @@
 
 import Foundation
 
-public struct VprLog {
-    
-    static let CN = "VprLog"
+public struct ViLog {
     
     // MARK: Public Data
     // --------------------------------------------------------------------------
-    
     public enum Mode {
         case VERBOSE
         case DEBUG
@@ -22,6 +19,13 @@ public struct VprLog {
         case OFF
     }
     public static var mode:Mode = .VERBOSE
+    
+    // MARK: Start
+    // --------------------------------------------------------------------------
+    public static func start(_ m: Mode = .VERBOSE) {
+        mode = m
+        log("ViLog start", "mode: \(mode)", .MINIMAL)
+    }
     
     // MARK: Public Log Functions
     // --------------------------------------------------------------------------
@@ -31,14 +35,33 @@ public struct VprLog {
         _log("[\(sourceName)] \(msg)", mode);
     }
     
+    
     // log an error message
     public static func err(_ sourceName:String, _ msg:String, _ mode:Mode) {
-        _log("!! ERROR [\(sourceName)] \(msg)", mode);
+        _log("!! ERROR !![\(sourceName)] \(msg)", mode);
     }
     
     // log a warning message
     public static func warn(_ sourceName:String, _ msg:String, _ mode:Mode) {
-        _log("?? WARNING [\(sourceName)] \(msg)", mode);
+        _log("?? WARNING ??[\(sourceName)] \(msg)", mode);
+    }
+    
+    // MARK: Function Markers
+    // --------------------------------------------------------------------------
+    public static func open(_ sourceName:String, _ targetName:String, _ mode:Mode) {
+        _log("<<< [\(sourceName)] \(targetName)...", mode);
+    }
+    public static func close(_ sourceName:String, _ targetName:String, _ mode: Mode) {
+        _log(">>> [\(sourceName)] \(targetName) complete.", mode);
+    }
+    public static func asyncOpen(_ sourceName:String, _ targetName:String, _ mode:Mode) {
+        _log("**< [\(sourceName)] \(targetName)...", mode);
+    }
+    public static func asyncReturn(_ sourceName:String, _ targetName:String, _ mode:Mode) {
+        _log("**- [\(sourceName)] \(targetName) returned.", mode);
+    }
+    public static func asyncHandled(_ sourceName:String, _ targetName:String, _ mode:Mode) {
+        _log("**> [\(sourceName)] \(targetName) complete.", mode);
     }
     
     // MARK: Internal Log Functions
