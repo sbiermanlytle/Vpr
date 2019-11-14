@@ -12,8 +12,8 @@ import SwiftyJSON
 
 public struct ViREST {
     
-    static let access_token: String = "$2a$10$QhCmorXrHZfBL0RBNMUi2erqGYYZTEmV7Ra7VavDuPJMg9DGH1OJe"
-    static let URL: String = "https://protected-headland-99912.herokuapp.com/api/v1"
+    static let access_token: String = ""
+    static let URL: String = ""
     
     public static func post(_ path: String) -> DataRequest {
         return Alamofire.request(ViREST.URL + path, method: .post)
